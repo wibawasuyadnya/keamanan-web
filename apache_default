@@ -41,7 +41,14 @@
         LogLevel warn
 
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-SetEnvIf x-forwarded-proto https HTTPS=on
+        SetEnvIf x-forwarded-proto https HTTPS=on
+
+
+        # ModSecurity Configuration
+        <IfModule security2_module>
+            Include /etc/modsecurity.d/modsecurity.conf
+            Include /etc/modsecurity.d/owasp-modsecurity-crs/crs-setup.conf
+        </IfModule>
 
 </VirtualHost>
 
