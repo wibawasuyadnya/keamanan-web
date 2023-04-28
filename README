@@ -9,7 +9,7 @@ Cara Menggunakan
 
 Service		Port
 Web-server 	8080
-phpMyAdmin	5000
+phpMyAdmin	9000
 
 Mysql
 hostname: mysql-server
